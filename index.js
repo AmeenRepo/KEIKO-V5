@@ -1,1 +1,131 @@
-const _0xeebbf3=_0x4243;(function(_0x51bbd5,_0x565119){const _0x45638c=_0x4243,_0xdd2610=_0x51bbd5();while(!![]){try{const _0x5e669f=-parseInt(_0x45638c(0x93))/0x1+-parseInt(_0x45638c(0x7f))/0x2+-parseInt(_0x45638c(0x6d))/0x3*(parseInt(_0x45638c(0x89))/0x4)+parseInt(_0x45638c(0x96))/0x5+-parseInt(_0x45638c(0x83))/0x6+-parseInt(_0x45638c(0x7b))/0x7+parseInt(_0x45638c(0x73))/0x8*(parseInt(_0x45638c(0x6b))/0x9);if(_0x5e669f===_0x565119)break;else _0xdd2610['push'](_0xdd2610['shift']());}catch(_0x2a9b2f){_0xdd2610['push'](_0xdd2610['shift']());}}}(_0x2f7b,0xf0ec5));function _0x2f7b(){const _0x170581=['Ghost','Using\x20Baileys\x20version\x20','apply','url','PORT','inherit','Unhandled\x20promise\x20rejection.\x20Bot\x20will\x20restart...','argv','exit','red','Installed\x20','✔️RECEIVED\x20','153JOPtBe','log','18mKyoNJ','fetchLatestBaileysVersion','uptime','main.js','listen','unwatchFile','3849992iiZSmR','static','Exited\x20with\x20code:\x20','Error\x20reading\x20plugins\x20folder:\x20','Bot\x20will\x20restart...','use','AMEEN-SER','join','8774675lKTwkl','𝐊𝐞𝐢𝐤𝐨\x20𝐕𝟓','\x20is\x20open','\x20plugins','2500974UaVXKG','send','ipc','/Ameen.html','11576868CkeNvq','magenta','unhandledRejection','kill','Figlet\x20error:','plugins','954732QjzkeB','yellow','watchFile','pathname','slice','error','green','reset','version','\x20Baileys\x20Library\x20Is\x20Not\x20Installed','1602214tyhTuN','default','env','1366950gzBLBi'];_0x2f7b=function(){return _0x170581;};return _0x2f7b();}import _0x1a500b from'chalk';import{spawn}from'child_process';import _0x161ab8 from'express';import _0x271a6d from'figlet';import _0x2005a1 from'fs';import _0x486922 from'path';import{fileURLToPath}from'url';_0x271a6d(_0xeebbf3(0x7c),{'font':_0xeebbf3(0x97),'horizontalLayout':_0xeebbf3(0x94),'verticalLayout':_0xeebbf3(0x94)},(_0xea44e5,_0x4f5432)=>{const _0x16abd6=_0xeebbf3;if(_0xea44e5){console[_0x16abd6(0x8e)](_0x1a500b[_0x16abd6(0x68)]('Figlet\x20error:',_0xea44e5));return;}console[_0x16abd6(0x6c)](_0x1a500b[_0x16abd6(0x8a)](_0x4f5432));}),_0x271a6d('Advanced\x20Whatsapp\x20Bot',{'horizontalLayout':'default','verticalLayout':'default'},(_0xd63aee,_0x58972f)=>{const _0x3d5024=_0xeebbf3;if(_0xd63aee){console[_0x3d5024(0x8e)](_0x1a500b[_0x3d5024(0x68)](_0x3d5024(0x87),_0xd63aee));return;}console['log'](_0x1a500b[_0x3d5024(0x84)](_0x58972f));});const app=_0x161ab8(),port=process[_0xeebbf3(0x95)][_0xeebbf3(0x9b)]||0x1f90,__filename=fileURLToPath(import.meta[_0xeebbf3(0x9a)]),__dirname=_0x486922['dirname'](__filename);app[_0xeebbf3(0x78)](_0x161ab8[_0xeebbf3(0x74)](_0x486922['join'](__dirname,_0xeebbf3(0x79)))),app['get']('/',(_0x4b5c13,_0x2c5481)=>{const _0x116177=_0xeebbf3;_0x2c5481['redirect'](_0x116177(0x82));}),app[_0xeebbf3(0x71)](port,()=>{const _0x77a26c=_0xeebbf3;console[_0x77a26c(0x6c)](_0x1a500b[_0x77a26c(0x8f)]('Port\x20'+port+_0x77a26c(0x7d)));});function _0x4243(_0x2c79fc,_0x35aaae){const _0x2f7b29=_0x2f7b();return _0x4243=function(_0x4243b4,_0x29a756){_0x4243b4=_0x4243b4-0x68;let _0x3c0606=_0x2f7b29[_0x4243b4];return _0x3c0606;},_0x4243(_0x2c79fc,_0x35aaae);}let isRunning=![];async function start(_0xf61d51){const _0x449bad=_0xeebbf3;if(isRunning)return;isRunning=!![];const _0x4462db=new URL(import.meta[_0x449bad(0x9a)])[_0x449bad(0x8c)],_0x530f58=[_0x486922[_0x449bad(0x7a)](_0x486922['dirname'](_0x4462db),_0xf61d51),...process[_0x449bad(0x9e)][_0x449bad(0x8d)](0x2)],_0x111f39=spawn(process[_0x449bad(0x9e)][0x0],_0x530f58,{'stdio':['inherit',_0x449bad(0x9c),_0x449bad(0x9c),_0x449bad(0x81)]});_0x111f39['on']('message',_0x54ae32=>{const _0x5b6e07=_0x449bad;console[_0x5b6e07(0x6c)](_0x1a500b['cyan'](_0x5b6e07(0x6a)+_0x54ae32));switch(_0x54ae32){case _0x5b6e07(0x90):_0x111f39['kill'](),isRunning=![],start[_0x5b6e07(0x99)](this,arguments);break;case'uptime':_0x111f39[_0x5b6e07(0x80)](process[_0x5b6e07(0x6f)]());break;}}),_0x111f39['on']('exit',_0x4742ba=>{const _0x3b65c0=_0x449bad;isRunning=![],console['error'](_0x1a500b[_0x3b65c0(0x68)]('Exited\x20With\x20Code:\x20'+_0x4742ba));if(_0x4742ba===0x0)return;_0x2005a1[_0x3b65c0(0x8b)](_0x530f58[0x0],()=>{const _0x4ab84f=_0x3b65c0;_0x2005a1[_0x4ab84f(0x72)](_0x530f58[0x0]),start(_0x4ab84f(0x70));});}),_0x111f39['on']('error',_0x9dc1d1=>{const _0xe4d5fb=_0x449bad;console[_0xe4d5fb(0x8e)](_0x1a500b['red']('Error:\x20'+_0x9dc1d1)),_0x111f39[_0xe4d5fb(0x86)](),isRunning=![],start(_0xe4d5fb(0x70));});const _0x13b235=_0x486922[_0x449bad(0x7a)](_0x486922['dirname'](_0x4462db),_0x449bad(0x88));_0x2005a1['readdir'](_0x13b235,async(_0x105982,_0x5b85f0)=>{const _0x3520ef=_0x449bad;if(_0x105982){console[_0x3520ef(0x8e)](_0x1a500b['red'](_0x3520ef(0x76)+_0x105982));return;}console[_0x3520ef(0x6c)](_0x1a500b[_0x3520ef(0x8a)](_0x3520ef(0x69)+_0x5b85f0['length']+_0x3520ef(0x7e)));try{const {default:_0xdff069}=await import('@whiskeysockets/baileys'),_0x1da8e1=(await _0xdff069[_0x3520ef(0x6e)]())[_0x3520ef(0x91)];console[_0x3520ef(0x6c)](_0x1a500b[_0x3520ef(0x8a)](_0x3520ef(0x98)+_0x1da8e1));}catch(_0x259ba9){console[_0x3520ef(0x8e)](_0x1a500b[_0x3520ef(0x68)](_0x3520ef(0x92)));}});}start(_0xeebbf3(0x70)),process['on'](_0xeebbf3(0x85),()=>{const _0x31d1a8=_0xeebbf3;console[_0x31d1a8(0x8e)](_0x1a500b[_0x31d1a8(0x68)](_0x31d1a8(0x9d))),start(_0x31d1a8(0x70));}),process['on'](_0xeebbf3(0x9f),_0x32b50d=>{const _0x1e22df=_0xeebbf3;console[_0x1e22df(0x8e)](_0x1a500b['red'](_0x1e22df(0x75)+_0x32b50d)),console[_0x1e22df(0x8e)](_0x1a500b[_0x1e22df(0x68)](_0x1e22df(0x77))),start('main.js');});
+import chalk from 'chalk'
+import { spawn } from 'child_process'
+import express from 'express'
+import figlet from 'figlet'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+figlet(
+  '𝐊𝐞𝐢𝐤𝐨 𝐕𝟓',
+  {
+    font: 'Ghost',
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+  },
+  (err, data) => {
+    if (err) {
+      console.error(chalk.red('Figlet error:', err))
+      return
+    }
+    console.log(chalk.yellow(data))
+  }
+)
+
+figlet(
+  'Advanced Whatsapp Bot',
+  {
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+  },
+  (err, data) => {
+    if (err) {
+      console.error(chalk.red('Figlet error:', err))
+      return
+    }
+    console.log(chalk.magenta(data))
+  }
+)
+
+const app = express()
+const port = process.env.PORT || 8080
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'AMEEN-SER')));
+
+app.get('/', (req, res) => {
+  res.redirect('/Ameen.html');
+});
+
+app.listen(port, () => {
+  console.log(chalk.green(`Port ${port} is open`))
+})
+
+let isRunning = false
+
+async function start(file) {
+  if (isRunning) return
+  isRunning = true
+
+  const currentFilePath = new URL(import.meta.url).pathname
+  const args = [path.join(path.dirname(currentFilePath), file), ...process.argv.slice(2)]
+  const p = spawn(process.argv[0], args, {
+    stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
+  })
+
+  p.on('message', data => {
+    console.log(chalk.cyan(`✔️RECEIVED ${data}`))
+    switch (data) {
+      case 'reset':
+        p.kill()
+        isRunning = false
+        start.apply(this, arguments)
+        break
+      case 'uptime':
+        p.send(process.uptime())
+        break
+    }
+  })
+
+  p.on('exit', code => {
+    isRunning = false
+    console.error(chalk.red(`Exited With Code: ${code}`))
+
+    if (code === 0) return
+
+    fs.watchFile(args[0], () => {
+      fs.unwatchFile(args[0])
+      start('ameen.js')
+    })
+  })
+
+  p.on('error', err => {
+    console.error(chalk.red(`Error: ${err}`))
+    p.kill()
+    isRunning = false
+    start('ameen.js')
+  })
+
+  const pluginsFolder = path.join(path.dirname(currentFilePath), 'plugins')
+
+  fs.readdir(pluginsFolder, async (err, files) => {
+    if (err) {
+      console.error(chalk.red(`Error reading plugins folder: ${err}`))
+      return
+    }
+    console.log(chalk.yellow(`Installed ${files.length} plugins`))
+
+    try {
+      const { default: baileys } = await import('@whiskeysockets/baileys')
+      const version = (await baileys.fetchLatestBaileysVersion()).version
+      console.log(chalk.yellow(`Using Baileys version ${version}`))
+    } catch (e) {
+      console.error(chalk.red(' Baileys Library Is Not Installed'))
+    }
+  })
+}
+
+start('ameen.js')
+
+process.on('unhandledRejection', () => {
+  console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
+  start('ameen.js')
+})
+
+process.on('exit', code => {
+  console.error(chalk.red(`Exited with code: ${code}`))
+  console.error(chalk.red(`Bot will restart...`))
+  start('ameen.js')
+})
