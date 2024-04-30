@@ -1,54 +1,56 @@
 {
-  "name": "𝐊𝐞𝐢𝐤𝐨 𝐕𝟓",
-  "description": "MD Made By Ameen Ser",
+  "name": "ShizoBot",
+  "description": "WhatsApp Bot Base using Baileys. Written in javascript",
   "keywords": [
-    "whatsapp ai"
+    "whatsapp bot",
+    "ShizoBot",
+    "WaBot",
+    "Termux-WaBot",
+    "WaBot-Base"
   ],
-  "repository": "https://github.com/AmeenRepo/KEIKO-V5",
-  "stack": "container",
-  "env": {
+"env": {
+    "DATABASE_URL": {
+      "description": "your mongodb database url",
+      "required": false,
+      "value": ""
+      },
     "SESSION_ID": {
-      "description": "Enter SESSION_ID",
-      "required": true,
+      "description": "your session id",
+      "required": false,
       "value": ""
     },
-    "MODE": {
-      "description": "Mode Public Or Private",
-      "required": true,
-      "value": "public"
+    "PRIVATE": {
+      "description": "Set it true if you want to make the bot private, leave Blank for public",
+      "required": false,
+      "value": ""
     },
     "PREFIX": {
-      "description": "Your Bot Access Prefix",
+      "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
       "required": false,
       "value": ""
     },
-     "HKEY": {
-      "description": "HEROKU_API_KEY  To Get: https://dashboard.heroku.com/account",
-      "required": true,
+     "BOT_NAME": {
+      "description": "Name of Your Bot",
+      "required": false,
       "value": ""
     },
-     "HAPP": {
-      "description": "HEROKU APP NAME",
-      "required": true,
+"OWNER_NAME": {
+      "description": "owner name of the bot or Your Name",
+      "required": false,
       "value": ""
     },
-    "statusview": {
-      "description": "STATUS VIEW",
+"OWNER_NUMBER": {
+      "description": "Your number or bot owner number",
       "required": false,
-      "value": "false"
+      "value": ""
     },
-    "autoRead": {
-      "description": "Bot Read Messages",
+"MAKER": {
+      "description": "Maker Text that replace MADE WITH ❤️ BY OREO-BOT",
       "required": false,
-      "value": "false"
-    },
-    "antidelete": {
-      "description": "Deleted Msg Forward",
-      "required": false,
-      "value": "false"
+      "value": ""
     }
     },
-    "buildpacks": [
+ "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
@@ -61,12 +63,5 @@
     {
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
-  ],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  }
+  ]
 }
-
