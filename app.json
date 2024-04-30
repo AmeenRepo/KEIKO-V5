@@ -1,61 +1,51 @@
 {
-  "name": "whatsapp-Automation",
-  "description": " Whatsapp Ai.",
+  "name": "𝐊𝐞𝐢𝐤𝐨 𝐕𝟓",
+  "description": "MD Made By Ameen Ser",
   "keywords": [
-    "whatsapp Ai"
+    "whatsapp ai"
   ],
-  "repository": "https://github.com/Guru322/GURU-BOT",
+  "repository": "https://github.com/AmeenRepo/KEIKO-V5",
   "stack": "container",
   "env": {
-    "DATABASE_URL": {
-      "description": "your mongodb database url",
-      "required": false,
-      "value": ""
-    },
     "SESSION_ID": {
-      "description": "your session id",
+      "description": "Enter SESSION_ID",
       "required": true,
       "value": ""
     },
     "MODE": {
-      "description": "mode public or private",
+      "description": "Mode Public Or Private",
       "required": true,
       "value": "public"
     },
     "PREFIX": {
-      "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
+      "description": "Your Bot Access Prefix",
       "required": false,
       "value": ""
     },
      "HKEY": {
-      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
+      "description": "HEROKU_API_KEY  To Get: https://dashboard.heroku.com/account",
       "required": true,
       "value": ""
     },
      "HAPP": {
-      "description": "Put the Heroku app name, same as above entered",
+      "description": "HEROKU APP NAME",
       "required": true,
       "value": ""
     },
     "statusview": {
-      "description": "make it true if you want bot to view status",
-      "required": false,
-      "value": ""
-    },
-    "autoRead": {
-      "description": "make it true if you want bot to read messages",
-      "required": false,
-      "value": ""
-    },
-    "antidelete": {
-      "description": "bot will forward deleted messages if you make it true",
+      "description": "STATUS VIEW",
       "required": false,
       "value": "false"
     },
-     "REMOVEBG_KEY": {
-      "description": "your RemoveBg api key",
+    "autoRead": {
+      "description": "Bot Read Messages",
       "required": false,
-      "value": ""
+      "value": "false"
+    },
+    "antidelete": {
+      "description": "Deleted Msg Forward",
+      "required": false,
+      "value": "false"
     }
     },
     "buildpacks": [
