@@ -1,56 +1,64 @@
 {
-  "name": "ShizoBot",
-  "description": "WhatsApp Bot Base using Baileys. Written in javascript",
+  "name": "whatsapp-Automation",
+  "description": " Whatsapp Ai.",
   "keywords": [
-    "whatsapp bot",
-    "ShizoBot",
-    "WaBot",
-    "Termux-WaBot",
-    "WaBot-Base"
+    "whatsapp Ai"
   ],
-"env": {
+  "repository": "https://github.com/Guru322/GURU-BOT",
+  "stack": "container",
+  "env": {
     "DATABASE_URL": {
       "description": "your mongodb database url",
       "required": false,
       "value": ""
-      },
+    },
     "SESSION_ID": {
       "description": "your session id",
-      "required": false,
+      "required": true,
       "value": ""
     },
-    "PRIVATE": {
-      "description": "Set it true if you want to make the bot private, leave Blank for public",
-      "required": false,
-      "value": ""
+    "MODE": {
+      "description": "mode public or private",
+      "required": true,
+      "value": "public"
     },
     "PREFIX": {
       "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
       "required": false,
       "value": ""
     },
-     "BOT_NAME": {
-      "description": "Name of Your Bot",
+     "HKEY": {
+      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
+      "required": true,
+      "value": ""
+    },
+     "HAPP": {
+      "description": "Put the Heroku app name, same as above entered",
+      "required": true,
+      "value": ""
+    },
+    "statusview": {
+      "description": "make it true if you want bot to view status",
       "required": false,
       "value": ""
     },
-"OWNER_NAME": {
-      "description": "owner name of the bot or Your Name",
+    "autoRead": {
+      "description": "make it true if you want bot to read messages",
       "required": false,
       "value": ""
     },
-"OWNER_NUMBER": {
-      "description": "Your number or bot owner number",
+    "antidelete": {
+      "description": "bot will forward deleted messages if you make it true",
       "required": false,
-      "value": ""
+      "value": "false"
     },
-"MAKER": {
-      "description": "Maker Text that replace MADE WITH ❤️ BY OREO-BOT",
+     "REMOVEBG_KEY": {
+      "description": "your RemoveBg api key",
       "required": false,
       "value": ""
     }
     },
- "buildpacks": [
+    "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
@@ -63,5 +71,12 @@
     {
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
-  ]
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
 }
+

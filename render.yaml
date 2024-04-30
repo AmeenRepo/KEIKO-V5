@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: KEIKO-V5
+    name: GURU-BOT
     env: docker
     region: Frankfurt
     plan: free

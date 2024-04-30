@@ -7,7 +7,7 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 
 figlet(
-  '𝐊𝐞𝐢𝐤𝐨 𝐕𝟓',
+  'GURU BOT',
   {
     font: 'Ghost',
     horizontalLayout: 'default',
@@ -43,10 +43,10 @@ const port = process.env.PORT || 8080
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, 'AMEEN-SER')));
+app.use(express.static(path.join(__dirname, 'Assets')));
 
 app.get('/', (req, res) => {
-  res.redirect('/Ameen.html');
+  res.redirect('/guru.html');
 });
 
 app.listen(port, () => {
@@ -81,13 +81,13 @@ async function start(file) {
 
   p.on('exit', code => {
     isRunning = false
-    console.error(chalk.red(`Exited With Code: ${code}`))
+    console.error(chalk.red(`❌Exited with code: ${code}`))
 
     if (code === 0) return
 
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
-      start('ameen.js')
+      start('Guru.js')
     })
   })
 
@@ -95,7 +95,7 @@ async function start(file) {
     console.error(chalk.red(`Error: ${err}`))
     p.kill()
     isRunning = false
-    start('ameen.js')
+    start('Guru.js')
   })
 
   const pluginsFolder = path.join(path.dirname(currentFilePath), 'plugins')
@@ -112,20 +112,20 @@ async function start(file) {
       const version = (await baileys.fetchLatestBaileysVersion()).version
       console.log(chalk.yellow(`Using Baileys version ${version}`))
     } catch (e) {
-      console.error(chalk.red(' Baileys Library Is Not Installed'))
+      console.error(chalk.red(' Baileys library is not installed'))
     }
   })
 }
 
-start('ameen.js')
+start('Guru.js')
 
 process.on('unhandledRejection', () => {
   console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
-  start('ameen.js')
+  start('Guru.js')
 })
 
 process.on('exit', code => {
   console.error(chalk.red(`Exited with code: ${code}`))
   console.error(chalk.red(`Bot will restart...`))
-  start('ameen.js')
+  start('Guru.js')
 })

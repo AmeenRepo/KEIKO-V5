@@ -1,7 +1,7 @@
 {
-    "name": "KEIKO V5",
+    "name": "guruai",
     "version": "2.0.0",
-    "description": "Made By Ameen Ser",
+    "description": "Advanced WhatsApp Ai",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -22,22 +22,22 @@
         "whatsapp",
         "js-whatsapp",
         "whatsapp",
-        "Ameen-Ser",
-        "Keiko-Md",
+        "guru-bot",
+        "GURU-bot-md",
         "multi-device",
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/AmeenRepo/KEIKO-V5",
+    "homepage": "https://github.com/Guru322/GURU-BOT",
     "author": {
-        "name": "KEIKO"
+        "name": "GURU"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/AmeenRepo/KEIKO-V5.git"
+        "url": "git+https://github.com/Guru322/GURU-BOT.git"
     },
     "bugs": {
-        "url": "https://github.com/AmeenRepo/KEIKO-V5/issues"
+        "url": "https://github.com/Guru322/GURU-BOT/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
