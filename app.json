@@ -7,7 +7,6 @@
   "repository": "https://github.com/AmeenRepo/KEIKO-V5",
   "stack": "container",
   "env": {
-    
     "SESSION_ID": {
       "description": "Enter SESSION_ID",
       "required": true,
@@ -47,8 +46,7 @@
       "description": "Deleted Msg Forward",
       "required": false,
       "value": "false"
-    },
-     
+    }
     },
     "buildpacks": [
     {
