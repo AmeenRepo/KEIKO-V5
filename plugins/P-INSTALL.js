@@ -2,8 +2,8 @@ import axios from 'axios'
 import fs from 'fs'
 import path from 'path'
 
-let handler = async (m, { args, usedPrefix, command }) => {
-  if (!args) throw `*Give Me Plugin URL*`
+let handler = async (m, { text, usedPrefix, command }) => {
+  if (!text) throw `*Give Me Plugin URL*`
 
   // Extract the Gist ID from the URL
   //const gistId = args.match(/(?:\/|gist\.github\.com\/)([AmeenRepo]+)/)
@@ -11,7 +11,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
 //  if (!gistId) throw `Invalid plugin URL`
 
  // const gistName = gistId[1]
-  const gistURL = args
+  const gistURL = text
            if (!gistURL) throw `*Keiko V5 ERROR*`
  
   try {
