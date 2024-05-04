@@ -10,7 +10,7 @@
     "SESSION_ID": {
       "description": "Enter SESSION_ID",
       "required": true,
-      "value": ""
+      "value": "GuruBot~g6ikLRF7"
     },
     "MODE": {
       "description": "Mode Public Or Private",
