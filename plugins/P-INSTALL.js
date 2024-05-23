@@ -3,17 +3,16 @@ import fs from 'fs'
 import path from 'path'
 
 let handler = async (m, { text, usedPrefix, command }) => {
-  if (!text) throw `*Give Me Plugin URL*`
+  if (!text) throw `Give Plugin URL`
 
   // Extract the Gist ID from the URL
-  //const gistId = args.match(/(?:\/|gist\.github\.com\/)([AmeenRepo]+)/)
+ // const gistId = text.match(/(?:\/|gist\.github\.com\/)([AmeenRepo]+)/)
 
 //  if (!gistId) throw `Invalid plugin URL`
 
- // const gistName = gistId[1]
+//  const gistName = gistId[1]
   const gistURL = text
-           if (!gistURL) throw `*Keiko V5 ERROR*`
- 
+
   try {
     const response = await axios.get(gistURL)
     const gistData = response.data
@@ -31,17 +30,17 @@ let handler = async (m, { text, usedPrefix, command }) => {
 
       // Write the Gist file content to the plugin file
       await fs.promises.writeFile(pluginPath, file.content)
-      m.reply(`*PLUGIN INSTALLED✅*\n*Command:* _${pluginName}_\n> ©AmeenXnT`)
+      m.reply(`*PLUGIN INSTALLED✅*\n> ©AmeenXnT`)
     }
   } catch (error) {
     throw `Error fetching or saving the plugin: ${error.message}`
   }
 }
 
-handler.help = ['$'].map(v => v + ' <Gist URL>')
+handler.help = ['install'].map(v => v + ' <Gist URL>')
 handler.tags = ['plugin']
-handler.command = /^plug$/i
-handler.prefix = false
+handler.command = /^install$/i
+
 handler.owner = true
 
 export default handler
