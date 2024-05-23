@@ -26,6 +26,6 @@ https://dashboard.heroku.com/new?template=https://github.com/AmeenRepo/KEIKO-V5
    <br>
  <div align="center">
   <a href="https://heroku.com/deploy?template=https://github.com/AmeenRepo/KEIKO-V5">
-    <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY ON HEROKU">
+    <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY TO HEROKU">
   </a>
 </div>
