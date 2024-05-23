@@ -1,0 +1,10 @@
+import axios from 'axios'
+let handler = async(m, { conn, usedPrefix, command }) => {
+let res = (await axios.get(`https://raw.githubusercontent.com/Mrimperfect7/api/IMPU/BOT-JSON/wadp.js`)).data  
+let url = await res[Math.floor(res.length * Math.random())]
+conn.sendFile(m.chat, url, 'error.jpg', `*DP IMAGES BY IMPU SER*`, m)} 
+//conn.sendButton(m.chat, "*DP IMAGES BY IMPU SER*", author, url, [['🫴🏻 NEXT 🥀', `${usedPrefix + command}`]], m)}
+handler.help = ['wadps']
+handler.tags = ['img']
+handler.command = /^(wadps)$/i
+export default handler
