@@ -1,5 +1,17 @@
 # KEIKO-V5
-A Multifunctional WhatsApp Bot Made By 👻AMEEN
+</br>
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=bold&size=55&pause=1000&color=Orange&center=true&width=910&height=100&lines=I'M+KEIKO-V5;MULTI+FUNCTIONAL;WHATSAPP+BOT;MADE+WITH+LOVE🦋;CODED+BY+AMEEN-XNT" alt="Typing SVG" /></a>
+  
+<p align="center">  
+  <a href="https://wa.me/+916238768108?text=HEY+VRO+BIG+FAN+VRO😝">
+    <img alt=AMEEN-SER height="250" src="./AMEEN-SER/AMEEN.png" width="250">
+   
+</a> 
+
+</p>
+
+</br>
 
 #### SETUP
 
@@ -28,3 +40,14 @@ A Multifunctional WhatsApp Bot Made By 👻AMEEN
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY TO HEROKU">
   </a>
 </div>
+
+#### For Help To Visit Here
+
+<a href='https://instagram.com/mr.z_ninja' target="_blank"><img alt='AMEEN-SER' src='https://img.shields.io/badge/-AMEEN_INT-white?style=for-the-badge&logo=instagram&logoColor=pink'/></a>
+<br>
+
+<a href='https://wa.me/916238768108?text=Hey🌠!+Want+Help' target="_blank"><img alt='AMEEN-SER' src='https://img.shields.io/badge/-AMEEN_INT-white?style=for-the-badge&logo=whatsapp&logoColor=green'/></a>
+<br>
+
+<a href='https://github.com/AmeenRepo' target="_blank"><img alt='AMEEN-SER' src='https://img.shields.io/badge/-AMEEN_INT-white?style=for-the-badge&logo=github&logoColor=black'/></a>
+<br>
