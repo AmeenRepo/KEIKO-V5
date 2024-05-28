@@ -1,5 +1,5 @@
 {
-    "name": "guruai",
+    "name": "AmeenSer",
     "version": "2.1.0",
     "description": "Advanced WhatsApp Ai",
     "main": "index.js",
@@ -22,22 +22,22 @@
         "whatsapp",
         "js-whatsapp",
         "whatsapp",
-        "guru-bot",
-        "GURU-bot-md",
+        "Keiko",
+        "KEIKO-V5-md",
         "multi-device",
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Guru322/GURU-BOT",
+    "homepage": "https://github.com/AmeenRepo/KEIKO-V5",
     "author": {
-        "name": "GURU"
+        "name": "AMEEN"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Guru322/GURU-BOT.git"
+        "url": "git+https://github.com/AmeenRepo/KEIKO-V5.git"
     },
     "bugs": {
-        "url": "https://github.com/Guru322/GURU-BOT/issues"
+        "url": "https://github.com/AmeenRepo/KEIKO-V5/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
