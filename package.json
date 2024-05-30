@@ -1,5 +1,5 @@
 {
-    "name": "AmeenSer",
+    "name": "guruai",
     "version": "2.1.0",
     "description": "Advanced WhatsApp Ai",
     "main": "index.js",
@@ -30,7 +30,7 @@
     ],
     "homepage": "https://github.com/AmeenRepo/KEIKO-V5",
     "author": {
-        "name": "AMEEN"
+        "name": "GURU"
     },
     "repository": {
         "type": "git",
