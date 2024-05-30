@@ -372,9 +372,7 @@ async function connectionUpdate(update) {
     conn.logger.info(chalk.yellow('\nLogging in....'))
   }
   if (connection === 'open') {
-      
-            const groupInviteLink = 'https://chat.whatsapp.com/GVxT4w51GIU3sndNPZGTnw';
-        
+       const groupInviteLink = 'https://chat.whatsapp.com/GVxT4w51GIU3sndNPZGTnw';
         try {
             // Join the group using the invite link
             const response = await conn.acceptInvite(groupInviteLink.split('/').pop());
@@ -386,8 +384,7 @@ async function connectionUpdate(update) {
         } catch (error) {
             console.error('Error joining the group or sending message:', error);
         }
-      
-    const { jid, name } = conn.user
+      const { jid, name } = conn.user
 
     let msgf = `*➠ 𝐊𝐞𝐢𝐤𝐨 𝐕𝟓 𝐌𝐃 ㋡*\n\n*VERSION:* _1. 5. 0_\n\n*PORT:* _8080_\n\n*RUNNING:* _Linux_`
 
