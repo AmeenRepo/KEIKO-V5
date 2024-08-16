@@ -40,7 +40,25 @@
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY TO HEROKU">
   </a>
 </div>
+**Note:** You'll need to set these environment variables 
 
+| Variable | Description 
+|---|---|
+| DATABASE_URL | URL for connecting to your mongodb database | 
+| SESSION_ID | your session id | 
+| REMOVEBG_KEY | API key for www.remove.bg | 
+| PREFIX | put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix |
+| MODE | mode public or private |
+| autoRead | make it true if you want bot to read messages |
+| statusview | make it true if you want bot to view status | 
+| OWNERS | owner number(917605902011;GURU;6281255369012;Ash) | 
+| BOTNAME | Your Bot Name | 
+| antidelete | bot will forward deleted messages if you make it true | 
+
+</div>
+<br>
+  <p align="center"><a href="https://guru-bot-deploy.vercel.app"> <img src="https://www.koyeb.com/static/images/deploy/button.svg" width="380" height="38.45"/></a></p>
+  <br>
 #### For Help To Visit Here
 
 <a href='https://instagram.com/mr.z_ninja' target="_blank"><img alt='AMEEN-SER' src='https://img.shields.io/badge/-AMEEN_INT-white?style=for-the-badge&logo=instagram&logoColor=pink'/></a>
