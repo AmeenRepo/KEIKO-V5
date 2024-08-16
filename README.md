@@ -40,6 +40,7 @@
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="DEPLOY TO HEROKU">
   </a>
 </div>
+
 **Note:** You'll need to set these environment variables 
 
 | Variable | Description 
@@ -57,8 +58,9 @@
 
 </div>
 <br>
-  <p align="center"><a href="https://guru-bot-deploy.vercel.app"> <img src="https://www.koyeb.com/static/images/deploy/button.svg" width="380" height="38.45"/></a></p>
+  <p align="center"><a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/AmeenRepo/KEIKO-V5&branch=main&name=keiko-v5&builder=dockerfile&env[DATABASE_URL]=&env[SESSION_ID]=&env[PREFIX]=&env[MODE]=public&env[REMOVEBG_KEY]=your+rmbg+key"> <img src="https://www.koyeb.com/static/images/deploy/button.svg" width="380" height="38.45"/></a></p>
   <br>
+  
 #### For Help To Visit Here
 
 <a href='https://instagram.com/mr.z_ninja' target="_blank"><img alt='AMEEN-SER' src='https://img.shields.io/badge/-AMEEN_INT-white?style=for-the-badge&logo=instagram&logoColor=pink'/></a>
