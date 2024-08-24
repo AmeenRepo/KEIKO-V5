@@ -72,8 +72,8 @@ global.APIKeys = {
 // Sticker WM
 global.botname = '𝐊𝐞𝐢𝐤𝐨 𝐕𝟓'
 global.premium = 'true'
-global.packname = '𝘼𝙢𝙚𝙚𝙣𝙄𝙣𝙩'
-global.author = '® AͣᴍͫᴇͤᴇͤɴIͥɴᴛⷮ'
+global.packname = process.env.PACKAGE || '𝘼𝙢𝙚𝙚𝙣𝙄𝙣𝙩'
+global.author = process.env.AUTHOR || '® AͣᴍͫᴇͤᴇͤɴIͥɴᴛⷮ'
 global.menuvid = 'https://i.imgur.com/VU2yq5G.mp4'
 global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/mr.z_ninja\n'
 global.dygp = 'https://chat.whatsapp.com/GVxT4w51GIU3sndNPZGTnw'
