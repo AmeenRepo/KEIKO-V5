@@ -103,7 +103,7 @@ async function gandu() {
       process.exit(1)
     } else {
       console.log(`${endi}`)
-      console.log(chalk.bgBlack(chalk.redBright('initializing AmeenInt')))
+      console.log(chalk.bgBlack(chalk.redBright('initializing Guru Bot')))
     }
   } catch (error) {
     console.error('Error:', error)
@@ -213,15 +213,15 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 global.authFolder = `session`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
-let { version, isLatest } = await fetchLatestWaWebVersion()
+//let { version, isLatest } = await fetchLatestWaWebVersion()
 
 const connectionOptions = {
-  version,
+  version: [2, 3000, 1015901307],
   logger: Pino({
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: ['AmeenInt🌩️', '', ''],
+  browser: ['𝗞𝗲𝗶𝗸𝗼𝗕𝗼𝘁𝘀', '𝗔𝗺𝗲𝗲𝗻𝗜𝗻𝘁', ''],
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
@@ -239,30 +239,31 @@ const connectionOptions = {
     let msg = await store.loadMessage(jid, key.id)
     return msg?.message || ''
   },
-  patchMessageBeforeSending: (message) => {
+  patchMessageBeforeSending: message => {
     const requiresPatch = !!(
-        message.buttonsMessage 
-        || message.templateMessage
-        || message.listMessage
-    );
+      message.buttonsMessage ||
+      message.templateMessage ||
+      message.listMessage
+    )
     if (requiresPatch) {
-        message = {
-            viewOnceMessage: {
-                message: {
-                    messageContextInfo: {
-                        deviceListMetadataVersion: 2,
-                        deviceListMetadata: {},
-                    },
-                    ...message,
-                },
+      message = {
+        viewOnceMessage: {
+          message: {
+            messageContextInfo: {
+              deviceListMetadataVersion: 2,
+              deviceListMetadata: {},
             },
-        };
+            ...message,
+          },
+        },
+      }
     }
 
-    return message;
-},
+    return message
+  },
   msgRetryCounterCache,
   defaultQueryTimeoutMs: undefined,
+  syncFullHistory: false,
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -328,7 +329,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 function runCleanup() {
   clearTmp()
     .then(() => {
-      console.log('CLEARED ALL AMEENINT')
+      console.log('Temporary file cleanup completed.')
     })
     .catch(error => {
       console.error('An error occurred during temporary file cleanup:', error)
@@ -356,51 +357,43 @@ function clearsession() {
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin, qr } = update
   global.stopped = connection
+
   if (isNewLogin) conn.isInit = true
+
   const code =
     lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
+
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-    conn.logger.info(await global.reloadHandler(true).catch(console.error))
+    try {
+      conn.logger.info(await global.reloadHandler(true))
+    } catch (error) {
+      console.error('Error reloading handler:', error)
+    }
   }
-  if (code && code == DisconnectReason.restartRequired) {
-    conn.logger.info(chalk.yellow('\n☄️Restart Required... Restarting'))
+
+  if (code && (code === DisconnectReason.restartRequired || code === 428)) {
+    conn.logger.info(chalk.yellow('\n🦋 Restart Required... Restarting'))
     process.send('reset')
   }
 
   if (global.db.data == null) loadDatabase()
-  if (!pairingCode && useQr && qr != 0 && qr != undefined) {
+
+  if (!pairingCode && useQr && qr !== 0 && qr !== undefined) {
     conn.logger.info(chalk.yellow('\nLogging in....'))
   }
+
   if (connection === 'open') {
-      console.log('Connected...', update);
-
-        conn.sendMessage('916238768108@s.whatsapp.net', {
-
-            text: `_🪀Hᴇʏ Aᴍᴇᴇɴ Sᴇʀ🪄_\n_𝐊𝐞𝐢𝐤𝐨 𝐕𝟓👻 has successfully connected to the server_\n> © AmeenXnT`
-
-        });
-            
-      
     const { jid, name } = conn.user
+    
+    const msg = `*🪀 𝗞𝗲𝗶𝗸𝗼 𝗩5 𝗠𝗗*\n\n*ᴠᴇʀꜱɪᴏɴ:* _2. 5. 0_\n\n*ᴩᴏʀᴛ:* _8000_\n\n*ʀᴜɴɴɪɴɢ:* _ʟɪɴᴜx(ʙ)_`
 
-    let msgf = `*➠ 𝐊𝐞𝐢𝐤𝐨 𝐕𝟓 𝐌𝐃 ㋡*\n\n*VERSION:* _2. 2. 0_\n\n*PORT:* _8080_\n\n*RUNNING:* _Linux_`
+    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
 
-    let gmes = conn.sendMessage(
-      jid,
-      {
-        text: msgf,
-        mentions: [jid],
-      },
-      {
-        quoted: null,
-      }
-    )
-
-    conn.logger.info(chalk.yellow('\n🌩️ R E A D Y'))
+    conn.logger.info(chalk.yellow('\n Ready ✅'))
   }
 
-  if (connection == 'close') {
-    conn.logger.error(chalk.yellow(`\nconnection closed....Get a New Session`))
+  if (connection === 'close') {
+    conn.logger.error(chalk.yellow(`\nConnection closed... Get a new session`))
   }
 }
 
@@ -584,7 +577,7 @@ async function _quickTest() {
 async function saafsafai() {
   if (stopped === 'close' || !conn || !conn.user) return
   clearsession()
-  console.log(chalk.cyanBright('\nStored Sessions Cleared'))
+  console.log(chalk.cyanBright('\nSession Cleared✅'))
 }
 
 setInterval(saafsafai, 10 * 60 * 1000)
