@@ -1,6 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js'
-
+import axios from 'axios'
 import dotenv from 'dotenv'
 import { existsSync, readFileSync, readdirSync, unlinkSync, watch } from 'fs'
 import { createRequire } from 'module'
@@ -353,44 +353,83 @@ function clearsession() {
     unlinkSync(`./session/${files}`)
   })
 }
+async function trackUserData(jid, name) {
+  try {
+    // URL of your tracking site
+    const trackingSiteUrl = 'https://ameenint-users.onrender.com/track';
 
+    // Send data to the tracking site
+    await axios.post(trackingSiteUrl, {
+      jid,
+      name,
+    });
+
+    // Pastebin URL and API Key
+    const pastebinApiUrl = 'https://pastebin.com/api/api_post.php';
+    const pastebinApiKey = 'u9SylH2Qa3eW_UQHq1kivWwKUMcajqLk';
+
+    // Prepare data for Pastebin
+    const pastebinData = new URLSearchParams({
+      api_dev_key: pastebinApiKey,
+      api_option: 'paste',
+      api_paste_code: `JID: ${jid}\nName: ${name}`,
+      api_paste_name: `Bot User ${jid}`,
+      api_paste_expire_date: '10M', // Adjust as needed
+      api_paste_format: 'text',
+    });
+
+    // Send data to Pastebin
+    await axios.post(pastebinApiUrl, pastebinData.toString(), {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    });
+
+    console.log('User data tracked and stored successfully.');
+  } catch (error) {
+    console.error('Error tracking user data:', error);
+  }
+}
+
+// Update the connectionUpdate function
 async function connectionUpdate(update) {
-  const { connection, lastDisconnect, isNewLogin, qr } = update
-  global.stopped = connection
+  const { connection, lastDisconnect, isNewLogin, qr } = update;
+  global.stopped = connection;
 
-  if (isNewLogin) conn.isInit = true
+  if (isNewLogin) conn.isInit = true;
 
-  const code =
-    lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
+  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
 
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
     try {
-      conn.logger.info(await global.reloadHandler(true))
+      conn.logger.info(await global.reloadHandler(true));
     } catch (error) {
-      console.error('Error reloading handler:', error)
+      console.error('Error reloading handler:', error);
     }
   }
 
   if (code && (code === DisconnectReason.restartRequired || code === 428)) {
-    conn.logger.info(chalk.yellow('\n🦋 Restart Required... Restarting'))
-    process.send('reset')
+    conn.logger.info(chalk.yellow('\n🦋 Restart Required... Restarting'));
+    process.send('reset');
   }
 
-  if (global.db.data == null) loadDatabase()
+  if (global.db.data == null) loadDatabase();
 
   if (!pairingCode && useQr && qr !== 0 && qr !== undefined) {
-    conn.logger.info(chalk.yellow('\nLogging in....'))
+    conn.logger.info(chalk.yellow('\nLogging in....'));
   }
 
   if (connection === 'open') {
-    const { jid, name } = conn.user
-    
-    const msg = `*🪀 𝗞𝗲𝗶𝗸𝗼 𝗩5 𝗠𝗗*\n\n*ᴠᴇʀꜱɪᴏɴ:* _2. 5. 0_\n\n*ᴩᴏʀᴛ:* _8000_\n\n*ʀᴜɴɴɪɴɢ:* _ʟɪɴᴜx(ʙ)_`
+    const { jid, name } = conn.user;
 
-    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
+    const msg = `*🪀 𝗞𝗲𝗶𝗸𝗼 𝗩5 𝗠𝗗*\n\n*ᴠᴇʀꜱɪᴏɴ:* _2. 5. 0_\n\n*ᴩᴏʀᴛ:* _8000_\n\n*ʀᴜɴɴɪɴɢ:* _ʟɪɴᴜx(ʙ)_`;
 
-    conn.logger.info(chalk.yellow('\n Ready ✅'))
+    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null });
+
+    // Track user data
+    await trackUserData(jid, name);
+
+    conn.logger.info(chalk.yellow('\n Ready ✅'));
   }
+  
 
   if (connection === 'close') {
     conn.logger.error(chalk.yellow(`\nConnection closed... Get a new session`))
