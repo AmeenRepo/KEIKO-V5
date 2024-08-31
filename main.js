@@ -84,17 +84,17 @@ async function gandu() {
     const gnome = packageData.author && packageData.author.name
 
     if (!gnome) {
-      console.log('LOl')
+      console.log('Fuck')
       process.exit(1)
     }
 
-    const lund = Buffer.from('Z3VydQ==', 'base64').toString()
+    const lund = Buffer.from('QW1lZW4=', 'base64').toString()
     const lawde = Buffer.from(
-      `Q2hlYXAgQ29weSBPZiBHdXJ1IEJvdCBGb3VuZCAsIFBsZWFzZSBVc2UgdGhlIE9yaWdpbmFsIEd1cnUgQm90IEZyb20gaHR0cHM6Ly9naXRodWIuY29tL0d1cnUzMjIvR1VSVS1CT1QK`,
+      `VGhpcyBJcyBUaGUgQ2hlYXBlc3QgQ29weSBPZiBBbWVlbkludCBCb3RzLiBUaGUgT3JpZ2luYWwgQm90IElzIEtlaWtvIFY1LiBKdXN0IENoZWNrIHRoZSBSZXBvIGh0dHBzOi8vZ2l0aHViLmNvbS9BbWVlblJlcG8vS0VJS08tVjU=`,
       'base64'
     ).toString()
     const endi = Buffer.from(
-      `U2VjdXJpdHkgY2hlY2sgcGFzc2VkLCBUaGFua3MgRm9yIHVzaW5nIEd1cnUgTXVsdGlEZXZpY2U=`,
+      `RXZlcnkgVGhpbmcgSXMgT2tleS4gVGhhbmsgWW91IEZvciBVc2luZyBBbWVlbkludCBCb3QgS2Vpa28tVjU=`,
       'base64'
     ).toString()
 
@@ -103,7 +103,7 @@ async function gandu() {
       process.exit(1)
     } else {
       console.log(`${endi}`)
-      console.log(chalk.bgBlack(chalk.redBright('initializing Guru Bot')))
+      console.log(chalk.bgBlack(chalk.redBright('Checking Keiko V5🌀')))
     }
   } catch (error) {
     console.error('Error:', error)
