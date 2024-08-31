@@ -88,7 +88,7 @@ async function gandu() {
       process.exit(1)
     }
 
-    const lund = Buffer.from('QW1lZW4=', 'base64').toString()
+    const lund = Buffer.from('YW1lZW4=', 'base64').toString()
     const lawde = Buffer.from(
       `VGhpcyBJcyBUaGUgQ2hlYXBlc3QgQ29weSBPZiBBbWVlbkludCBCb3RzLiBUaGUgT3JpZ2luYWwgQm90IElzIEtlaWtvIFY1LiBKdXN0IENoZWNrIHRoZSBSZXBvIGh0dHBzOi8vZ2l0aHViLmNvbS9BbWVlblJlcG8vS0VJS08tVjU=`,
       'base64'
