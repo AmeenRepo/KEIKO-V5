@@ -1,11 +1,11 @@
 # KEIKO-V5
 </br>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=bold&size=55&pause=1000&color=red&center=true&width=910&height=100&lines=I'M+KEIKO-V5;MULTI+FUNCTIONAL;WHATSAPP+BOT;MADE+WITH+LOVE🦋;CODED+BY+AMEEN-XNT" alt="Typing SVG" /></a>
+<a href="https://ameenrepo.github.io/View-/KEIKO55.png"><img src="https://readme-typing-svg.demolab.com?font=bold&size=55&pause=1000&color=red&center=true&width=910&height=100&lines=I'M+KEIKO-V5;MULTI+FUNCTIONAL;WHATSAPP+BOT;MADE+WITH+LOVE🦋;CODED+BY+AMEEN-XNT" alt="Typing SVG" /></a>
   
 <p align="center">  
   <a href="https://wa.me/+916238768108?text=HEY+VRO+BIG+FAN+VRO😝">
-    <img alt=AMEEN-SER height="250" src="https://ameenrepo.github.io/View-/KEIKO55.png" width="250">
+    <img alt=AMEEN-SER height="250" src="https://ameenrepo.github.io/View-/KEIKO5.png" width="250">
    
 </a> 
 
