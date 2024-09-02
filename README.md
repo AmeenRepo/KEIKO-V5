@@ -5,7 +5,7 @@
   
 <p align="center">  
   <a href="https://wa.me/+916238768108?text=HEY+VRO+BIG+FAN+VRO😝">
-    <img alt=AMEEN-SER height="250" src="https://github.com/AmeenRepo/KEIKO-V5/AMEEN-SER/KEIKO55.png" width="250">
+    <img alt=AMEEN-SER height="250" src="https://github.com/AmeenRepo/KEIKO-V5/blob/main/AMEEN-SER/KEIKO55.png" width="250">
    
 </a> 
 
