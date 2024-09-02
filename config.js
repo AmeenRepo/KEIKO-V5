@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "916238768108;𝐀𝐦𝐞𝐞𝐧𝐈𝐧𝐭🌩️"
+const ownervb = process.env.OWNERS || "263713955768;𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫⚡"
 
 
 const ownerlist = ownervb.split(';');
@@ -73,7 +73,7 @@ global.APIKeys = {
 global.botname = '𝐊𝐞𝐢𝐤𝐨 𝐕𝟓'
 global.premium = 'true'
 global.packname = process.env.PACKAGE || '𝘼𝙢𝙚𝙚𝙣𝙄𝙣𝙩'
-global.author = process.env.AUTHOR || '® AͣᴍͫᴇͤᴇͤɴIͥɴᴛⷮ'
+global.author = process.env.AUTHOR || '𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫⚡'
 global.menuvid = 'https://i.imgur.com/VU2yq5G.mp4'
 global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/mr.z_ninja\n'
 global.dygp = 'https://chat.whatsapp.com/GVxT4w51GIU3sndNPZGTnw'
@@ -81,7 +81,7 @@ global.fgsc = 'https://github.com/AmeenRepo/KEIKO-V5'
 global.fglog = 'https://i.imgur.com/7U0dq0h.jpeg'
 global.thumb = fs.readFileSync('./AMEEN-SER/AMEEN.png')
 
-global.wait = '*_Charging..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*Loading..🔃*'
 global.rwait = '⛈️'
 global.dmoji = '🤭'
 global.done = '✅'
