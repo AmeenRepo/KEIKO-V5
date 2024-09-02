@@ -11,14 +11,14 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 │         
 └┬❖ 「 *⚠️ SCRIPT* 」
   │
-  │☞ *💫OWNER:* ᴀᴍᴇᴇɴ xɴᴛ
+  │☞ *💫OWNER:* 𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫 
   │
   │☞ *🌬️OPARATOR:* Balram
   │
   └─────────────┈ ⳹
   `
-let Niya = "© 𝞓𝞛𝞢𝞢𝞜-𝙎𝞢𝞒"
-conn.sendButton(m.chat, Nivedya, Niya, Ameen, [], null, [['BOT SCRIPT ㋡', 'https://GitHub.com/AmeenRepo/KEIKO-V5']], m)
+let Niya = "© 𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫⚡"
+conn.sendButton(m.chat, Nivedya, Niya, Ameen, [], null, [['BOT SCRIPT ㋡', 'https://GitHub.com/CalciFer-Howl/KEIKO-V5']], m)
 m.react('🎟️')
 }
 handler.help = ['main']
