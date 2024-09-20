@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "916238768107;𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫⚡"
+const ownervb = process.env.OWNERS || "916238768108;𝐂𝐚𝐥𝐜𝐢𝐅𝐞𝐫⚡"
 
 
 const ownerlist = ownervb.split(';');
