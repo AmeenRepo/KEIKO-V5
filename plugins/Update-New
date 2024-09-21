@@ -1,0 +1,53 @@
+import db from '../lib/database.js';
+import { execSync } from 'child_process';
+
+let handler = async (m, { conn, text }) => {
+  if (conn.user.jid == conn.user.jid) {
+    try {
+      let branch = 'main'; // Always use 'main' branch for checking and applying updates
+
+      // Check if user wants to "update now" (apply updates immediately)
+      if (text && text.toLowerCase() === 'now') {
+        // Pull the latest updates from the main branch
+        let pullOutput = execSync(`git pull origin ${branch}`).toString();
+        
+        // Send success message
+        conn.reply(m.chat, `🛠️ *Main Branch Updates Applied Successfully* 🛠️\n\n${pullOutput}`, m);
+      } else {
+        // Otherwise, just check for updates
+        let fetchOutput = execSync(`git fetch origin ${branch}`);
+        
+        // Check for new commits that are not yet pulled
+        let updates = execSync(`git log HEAD..origin/${branch} --oneline`).toString().trim();
+        
+        if (updates) {
+          // Split the updates into an array for each new commit
+          let updateList = updates.split('\n');
+          
+          // Create a beautiful message showing the updates
+          let updateMessage = '🛠️ *New Updates Available* 🛠️\n\n';
+          updateList.forEach((update, index) => {
+            updateMessage += `🛠️ *Update ${index + 1}:* ${update}\n`;
+          });
+
+          updateMessage += `\nUse *update now* command to apply these updates from the main branch.`;
+          
+          // Reply with the list of updates
+          conn.reply(m.chat, updateMessage, m);
+        } else {
+          conn.reply(m.chat, '🛠️ No new updates found. You are already up to date! 🛠️', m);
+        }
+      }
+    } catch (error) {
+      conn.reply(m.chat, `Error: ${error.message}`, m);
+    }
+  }
+};
+
+// Define help and tags for both the 'update' and 'update now' commands
+handler.help = ['update', 'update now']
+handler.tags = ['owner']
+handler.command = ['update', 'fix', 'update now']
+handler.rowner = true
+
+export default handler;
