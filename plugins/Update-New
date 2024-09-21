@@ -4,35 +4,27 @@ import { execSync } from 'child_process';
 let handler = async (m, { conn, text }) => {
   if (conn.user.jid == conn.user.jid) {
     try {
-      let branch = 'main'; // Always use 'main' branch for checking and applying updates
+      let branch = 'main'; // ente  'main' 
 
-      // Check if user wants to "update now" (apply updates immediately)
       if (text && text.toLowerCase() === 'now') {
-        // Pull the latest updates from the main branch
+        
         let pullOutput = execSync(`git pull origin ${branch}`).toString();
         
-        // Send success message
+        // Set ayi
         conn.reply(m.chat, `🛠️ *Main Branch Updates Applied Successfully* 🛠️\n\n${pullOutput}`, m);
       } else {
-        // Otherwise, just check for updates
         let fetchOutput = execSync(`git fetch origin ${branch}`);
-        
-        // Check for new commits that are not yet pulled
+     
         let updates = execSync(`git log HEAD..origin/${branch} --oneline`).toString().trim();
         
         if (updates) {
-          // Split the updates into an array for each new commit
           let updateList = updates.split('\n');
-          
-          // Create a beautiful message showing the updates
           let updateMessage = '🛠️ *New Updates Available* 🛠️\n\n';
           updateList.forEach((update, index) => {
             updateMessage += `🛠️ *Update ${index + 1}:* ${update}\n`;
           });
-
           updateMessage += `\nUse *update now* command to apply these updates from the main branch.`;
-          
-          // Reply with the list of updates
+
           conn.reply(m.chat, updateMessage, m);
         } else {
           conn.reply(m.chat, '🛠️ No new updates found. You are already up to date! 🛠️', m);
@@ -43,8 +35,6 @@ let handler = async (m, { conn, text }) => {
     }
   }
 };
-
-// Define help and tags for both the 'update' and 'update now' commands
 handler.help = ['update', 'update now']
 handler.tags = ['owner']
 handler.command = ['update', 'fix', 'update now']
