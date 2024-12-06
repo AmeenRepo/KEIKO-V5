@@ -8,8 +8,8 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/CalciFer-Howl/KEIKO-V7.git /ninja
-WORKDIR /ninja
+RUN git clone https://github.com/AmeenRepo/KEIKO-V5.git /keiko
+WORKDIR /keiko
 RUN yarn install
 CMD ["npm", "start"]
 
